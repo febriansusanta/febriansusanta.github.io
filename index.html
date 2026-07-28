@@ -182,6 +182,55 @@
     .stat strong { display: block; font-family: "Manrope", sans-serif; font-size: 2rem; letter-spacing: -.04em; }
     .stat span { color: var(--muted); font-size: .82rem; }
 
+    .about { padding-bottom: 34px; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 100px;
+      align-items: start;
+    }
+    .about-title {
+      position: sticky;
+      top: 120px;
+    }
+    .about-title h2 {
+      max-width: 480px;
+      margin-bottom: 24px;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+    }
+    .about-title p { max-width: 430px; margin: 0; color: var(--muted); }
+    .about-story {
+      padding: 38px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: 0 16px 50px rgba(12, 49, 72, .06);
+    }
+    .about-story p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+    .about-story p:first-child {
+      color: var(--ink);
+      font-size: 1.28rem;
+      line-height: 1.55;
+    }
+    .about-story p:last-of-type { margin-bottom: 0; }
+    .about-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      margin-top: 30px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--line);
+    }
+    .about-fact { padding: 17px; background: var(--paper); }
+    .about-fact strong { display: block; font-size: .8rem; }
+    .about-fact span { color: var(--muted); font-size: .74rem; }
+
     section { padding: 112px 0; }
     .section-head {
       display: grid;
@@ -320,7 +369,8 @@
     @media (max-width: 900px) {
       .nav-links a:not(.nav-cta) { display: none; }
       .hero { min-height: auto; }
-      .hero-grid, .section-head, .journey-grid { grid-template-columns: 1fr; gap: 42px; }
+      .hero-grid, .section-head, .journey-grid, .about-grid { grid-template-columns: 1fr; gap: 42px; }
+      .about-title { position: static; }
       .hero-card { max-width: 520px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .stat:nth-child(2) { border-right: 0; }
@@ -348,6 +398,8 @@
       .contact-card { padding: 46px 27px; border-radius: 22px; }
       .profile-grid { grid-template-columns: 1fr; }
       .profile-card { min-height: 142px; }
+      .about-story { padding: 27px; }
+      .about-facts { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -361,6 +413,7 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#top">Febrian F. Susanta</a>
       <div class="nav-links">
+        <a href="#about">About</a>
         <a href="#focus">Research</a>
         <a href="#work">Publications</a>
         <a href="#journey">Journey</a>
@@ -400,6 +453,27 @@
       </div>
     </div>
 
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-title">
+          <p class="eyebrow">About me</p>
+          <h2>I use geospatial thinking to understand how cities work for people.</h2>
+          <p>Researcher, educator, and engineer working between Taiwan and Indonesia.</p>
+        </div>
+        <div class="about-story">
+          <p>Hello, I am Febrian Fitryanik Susanta, an Assistant Professor in Geodetic Engineering at Universitas Gadjah Mada and a PhD candidate in Geomatics at National Cheng Kung University.</p>
+          <p>My research sits at the intersection of geospatial science, transportation, and human-centered urban planning. I study pedestrian safety, walkability, public-transport accessibility, and route choice—especially how age and the built environment shape people’s experience of moving through a city.</p>
+          <p>Across my academic and professional work, I have contributed to spatial-data infrastructure, municipal geoportals, 3D cadastre, disaster visualization, asset monitoring, and WebGIS projects. These experiences have taught me to connect rigorous spatial methods with tools that planners, institutions, and communities can actually use.</p>
+          <p>As an educator, I teach GIS, geospatial analysis, and spatial-web technologies while supervising student research and project-based learning. I enjoy collaborations that bring together maps, data, and public purpose to make mobility and essential services safer and more equitable.</p>
+          <div class="about-facts">
+            <div class="about-fact"><strong>Based in</strong><span>Tainan & Yogyakarta</span></div>
+            <div class="about-fact"><strong>Discipline</strong><span>Geomatics & Geodetic Engineering</span></div>
+            <div class="about-fact"><strong>Languages</strong><span>Indonesian & English</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="focus">
       <div class="wrap">
         <div class="section-head">
@@ -433,12 +507,20 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Selected work</p>
-            <h2>Research with real-world direction.</h2>
+            <p class="eyebrow">Publications</p>
+            <h2>A growing record of applied geospatial research.</h2>
           </div>
-          <p class="section-copy">Recent work spans pedestrian crash modelling, interpretable spatial machine learning, accessible route planning, and geovisualization.</p>
+          <p class="section-copy">Peer-reviewed work spanning pedestrian and motorcycle safety, interpretable spatial machine learning, public transport, 3D cadastre, and geovisualization.</p>
         </div>
         <div class="work-list">
+          <article class="work-item">
+            <span class="work-year">2026</span>
+            <div>
+              <h3>Identifying environmental factors related to pedestrian crash frequency across age groups</h3>
+              <p>Putra, I. G. B., Kuo, P. F., & Susanta, F. F. · Transport Policy, 104235</p>
+            </div>
+            <span class="arrow" aria-hidden="true">•</span>
+          </article>
           <a class="work-item" href="https://doi.org/10.1016/j.aap.2026.108450" target="_blank" rel="noreferrer">
             <span class="work-year">2026</span>
             <div>
@@ -463,11 +545,51 @@
             </div>
             <span class="arrow" aria-hidden="true">↗</span>
           </a>
+          <a class="work-item" href="https://doi.org/10.33795/prokons.v14i1.293" target="_blank" rel="noreferrer">
+            <span class="work-year">2020</span>
+            <div>
+              <h3>Exploration of various visual display methods for geovisualization purposes</h3>
+              <p>Susilo, H., Rassarandi, F. D., Susanta, F. F., Putra, & Komariah, S. · Prokons</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="work-item" href="https://doi.org/10.24815/jacps.v9i3.17151" target="_blank" rel="noreferrer">
+            <span class="work-year">2020</span>
+            <div>
+              <h3>Comparison of UAV aerial-photo and GNSS accuracy for village mapping</h3>
+              <p>Marwan, Wirandha, F. S., Nizzamuddin, & Susanta, F. F. · Journal of Aceh Physics Society</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="work-item" href="https://doi.org/10.24895/JIG.2020.26-1.1085" target="_blank" rel="noreferrer">
+            <span class="work-year">2020</span>
+            <div>
+              <h3>Visualizing public-transport network analysis in Kulon Progo</h3>
+              <p>Susanta, F. F., & Aditya, T. · GEOMATIKA</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
           <a class="work-item" href="https://doi.org/10.22146/jgise.51131" target="_blank" rel="noreferrer">
             <span class="work-year">2019</span>
             <div>
               <h3>Geovisual analytics of spatio-temporal earthquake data</h3>
               <p>Journal of Geospatial Information Science and Engineering · Indonesia</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="work-item" href="https://doi.org/10.22146/jgise.51130" target="_blank" rel="noreferrer">
+            <span class="work-year">2019</span>
+            <div>
+              <h3>Coseismic displacement accumulation using Indonesia’s InaCORS network</h3>
+              <p>Pratama, C., Susanta, F. F., Ilahi, R., Khomaini, A. F., & Abdillah, H. W. K. · JGISE</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="work-item" href="https://doi.org/10.30871/jagi.v3i2.1309" target="_blank" rel="noreferrer">
+            <span class="work-year">2019</span>
+            <div>
+              <h3>The evolution of geospatial aspects in regional-autonomy law in Indonesia</h3>
+              <p>Rassarandi, F. D., Susilo, H., Kariyono, Fajri, K., & Susanta, F. F. · Journal of Applied Geospatial Information</p>
             </div>
             <span class="arrow" aria-hidden="true">↗</span>
           </a>
