@@ -79,7 +79,7 @@
       letter-spacing: -.02em;
       text-decoration: none;
     }
-    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links { display: flex; align-items: center; gap: 19px; }
     .nav-links a {
       color: rgba(255,255,255,.72);
       font-size: .82rem;
@@ -358,6 +358,35 @@
     .honor-card h3 { margin: 0 0 10px; font-size: 1.22rem; letter-spacing: -.025em; }
     .honor-card p { margin: 0; color: var(--muted); font-size: .88rem; }
 
+    .projects { background: var(--surface); }
+    .project-list { border-top: 1px solid var(--line); }
+    .project-item {
+      display: grid;
+      grid-template-columns: 110px 1fr auto;
+      gap: 30px;
+      align-items: start;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .project-year {
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .project-item h3 { margin: 0 0 7px; font-size: 1.12rem; letter-spacing: -.02em; }
+    .project-item p { max-width: 820px; margin: 0; color: var(--muted); font-size: .86rem; }
+    .project-role {
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--green);
+      font-size: .69rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
     .skills-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 42px; }
     .skill { padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: .82rem; font-weight: 600; }
 
@@ -466,6 +495,8 @@
       .profile-grid { grid-template-columns: 1fr; }
       .profile-card { min-height: 142px; }
       .honor-card { grid-template-columns: 58px 1fr; min-height: auto; padding: 23px; }
+      .project-item { grid-template-columns: 1fr; gap: 8px; }
+      .project-role { justify-self: start; grid-row: 2; }
       .about-story { padding: 27px; }
       .about-facts { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
@@ -486,6 +517,7 @@
         <a href="#work">Publications</a>
         <a href="#journey">Journey</a>
         <a href="#honors">Honors</a>
+        <a href="#projects">Projects</a>
         <a href="#profiles">Profiles</a>
         <a class="nav-cta" href="mailto:febrian.fitryanik.s@ugm.ac.id">Get in touch ↗</a>
       </div>
@@ -969,6 +1001,188 @@
               <h3>Top 5 — Geosat Scientific Writing Competition</h3>
               <p>Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Experience</p>
+            <h2>Research, professional projects, and community service.</h2>
+          </div>
+          <p class="section-copy">Selected work connecting geospatial research with public institutions, urban planning, land administration, disaster resilience, and community capacity building.</p>
+        </div>
+        <div class="project-list">
+          <article class="project-item">
+            <span class="project-year">2024–Present</span>
+            <div>
+              <h3>Elderly pedestrian traffic safety and pedestrian space</h3>
+              <p>Sidewalk-characteristics research supported by the Higher Education Sprout Project, Ministry of Education, and the National Science and Technology Council, Taiwan.</p>
+            </div>
+            <span class="project-role">Research Assistant</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2023</span>
+            <div>
+              <h3>Pilot project for upgrading 3D spatial data</h3>
+              <p>Ministry of Agrarian Affairs and Spatial Planning / National Land Agency, Bogor, Indonesia.</p>
+            </div>
+            <span class="project-role">Mid-level Researcher</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2023</span>
+            <div>
+              <h3>Geospatial community service in Murtigading Village</h3>
+              <p>Sanden Sub-district, Bantul Regency, with the Department of Geodetic Engineering, Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Community Service Member</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2023</span>
+            <div>
+              <h3>Accessibility analysis of public transportation in Yogyakarta City</h3>
+              <p>Department of Geodetic Engineering, Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Team Leader</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2022</span>
+            <div>
+              <h3>Potret 1200: UAV- and internet-based asset monitoring system</h3>
+              <p>Kedaireka, Indonesian Sovereignty in Design.</p>
+            </div>
+            <span class="project-role">Researcher</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2021–2023</span>
+            <div>
+              <h3>Development of the Yogyakarta City spatial information system</h3>
+              <p>Land and Urban Planning Agency, Yogyakarta City.</p>
+            </div>
+            <span class="project-role">GIS Expert</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2021–2023</span>
+            <div>
+              <h3>Geospatial community service in Gerbosari Village</h3>
+              <p>Samigaluh Sub-district, Kulon Progo Regency, with the Department of Geodetic Engineering, Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Community Service Leader</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2021</span>
+            <div>
+              <h3>Land database development for implementing 3D cadastre</h3>
+              <p>Ministry of Agrarian Affairs and Spatial Planning / National Land Agency, Indonesia.</p>
+            </div>
+            <span class="project-role">Co-Researcher</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2021</span>
+            <div>
+              <h3>Jala Citra I – Aurora Expedition</h3>
+              <p>Hydro-Oceanography Centre, Indonesian Navy.</p>
+            </div>
+            <span class="project-role">Researcher</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2020–2023</span>
+            <div>
+              <h3>Karangsari Village geospatial information system</h3>
+              <p>Community-service initiative in Pengasih, Kulon Progo, with the Faculty of Engineering, Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Community Service Member</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2020–2021</span>
+            <div>
+              <h3>Collaborative land-boundary delimitation using AR/VR</h3>
+              <p>Game-engine technology supporting accelerated complete systematic land registration through Higher Education Applied Research, Indonesia.</p>
+            </div>
+            <span class="project-role">Co-Researcher</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2020</span>
+            <div>
+              <h3>National Spatial Data Infrastructure review</h3>
+              <p>Consultancy services for the Geospatial Information Agency, Indonesia.</p>
+            </div>
+            <span class="project-role">Research Assistant</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2020</span>
+            <div>
+              <h3>Pilot project of 3D cadastre at MRT Jakarta</h3>
+              <p>Ministry of Agrarian Affairs and Spatial Planning / National Land Agency, Indonesia.</p>
+            </div>
+            <span class="project-role">Co-Researcher</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2019</span>
+            <div>
+              <h3>Land administration information-system planning in Madiun Regency</h3>
+              <p>Development Planning Agency at Sub-National Level, Indonesia.</p>
+            </div>
+            <span class="project-role">Team Member</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2019</span>
+            <div>
+              <h3>Klaten Regency spatial information system</h3>
+              <p>Office of Spatial Planning and Public Works, Klaten Regency, Indonesia.</p>
+            </div>
+            <span class="project-role">GIS Expert</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2019</span>
+            <div>
+              <h3>Android application layouts for Yogyakarta spatial information systems</h3>
+              <p>Land and Urban Planning Agency, Yogyakarta City.</p>
+            </div>
+            <span class="project-role">GIS Expert</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2019</span>
+            <div>
+              <h3>GIS training for village staff in Panjatan</h3>
+              <p>Community service in Panjatan Sub-district, Kulon Progo, with the Faculty of Engineering, Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Community Service Member</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2019</span>
+            <div>
+              <h3>Sidokarto Village geospatial information system</h3>
+              <p>Community service in Godean, Sleman, with the Department of Geodetic Engineering, Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Community Service Member</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2019</span>
+            <div>
+              <h3>Visual analytics of spatio-temporal earthquake data in Indonesia</h3>
+              <p>Department of Geodetic Engineering, Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Team Leader</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2018–2019</span>
+            <div>
+              <h3>3D GeoSmartCity</h3>
+              <p>Higher Education Applied Research, Indonesia.</p>
+            </div>
+            <span class="project-role">Research Assistant</span>
+          </article>
+          <article class="project-item">
+            <span class="project-year">2017</span>
+            <div>
+              <h3>Geocrowd and geogaming for crowdsourced peat-fire monitoring</h3>
+              <p>Application development for Pulau Padang, Riau, with Six Capital and Universitas Gadjah Mada.</p>
+            </div>
+            <span class="project-role">Research Assistant</span>
           </article>
         </div>
       </div>
