@@ -258,6 +258,26 @@
 
     .work { background: var(--surface); }
     .work-list { border-top: 0; }
+    .pub-category {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+      margin: 22px 0 10px;
+      padding: 22px 0;
+      border-bottom: 2px solid var(--ink);
+    }
+    .pub-category span {
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+    .pub-category h3 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3vw, 2.45rem);
+      letter-spacing: -.04em;
+    }
+    .pub-category-conference { margin-top: 76px; }
     .pub-year {
       display: grid;
       grid-template-columns: 120px 1fr;
@@ -287,6 +307,8 @@
     .work-item h3 { margin: 0 0 8px; font-size: 1.25rem; letter-spacing: -.025em; }
     .work-item p { max-width: 900px; margin: 0; color: var(--muted); font-size: .9rem; }
     .work-item .doi { display: inline-block; margin-top: 7px; color: var(--green); font-size: .76rem; font-weight: 700; }
+    .work-item.nonlinked { cursor: default; }
+    .work-item.nonlinked .arrow { color: var(--muted); }
     .arrow { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; transition: background .2s, color .2s; }
     .work-item:hover .arrow { background: var(--green); color: white; }
 
@@ -529,9 +551,13 @@
             <p class="eyebrow">Publications</p>
             <h2>A growing record of applied geospatial research.</h2>
           </div>
-          <p class="section-copy">Peer-reviewed work spanning pedestrian and motorcycle safety, interpretable spatial machine learning, public transport, 3D cadastre, and geovisualization.</p>
+          <p class="section-copy">Journal articles and conference contributions spanning pedestrian and motorcycle safety, interpretable spatial machine learning, public transport, 3D cadastre, and geovisualization.</p>
         </div>
         <div class="work-list">
+          <div class="pub-category">
+            <span>01 / JOURNALS</span>
+            <h3>Peer-reviewed journal articles</h3>
+          </div>
           <section class="pub-year" aria-labelledby="pub-2026">
             <h3 class="pub-year-label" id="pub-2026">2026</h3>
             <div class="pub-items">
@@ -626,6 +652,195 @@
                   <span class="doi">https://doi.org/10.30871/jagi.v3i2.1309</span>
                 </div>
                 <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+
+          <div class="pub-category pub-category-conference">
+            <span>02 / CONFERENCES</span>
+            <h3>Conference papers & presentations</h3>
+          </div>
+
+          <section class="pub-year" aria-labelledby="conf-2026">
+            <h3 class="pub-year-label" id="conf-2026">2026</h3>
+            <div class="pub-items">
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Modeling dynamic walkability to support time-based route planning for older adults</h3>
+                  <p>Susanta, F. F., Kuo, P. F., & Putra, I. G. B. (2026). Modeling dynamic walkability to support time-based route planning for older adults. In <em>Proceedings of the XXV ISPRS Congress (TC IV: Spatial Information Science)</em>, Toronto, Canada.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Integrating multi-objective optimization and spatial analysis for the site selection and improvement of levee crossing facilities</h3>
+                  <p>Ku, T. Y., Susanta, F. F., Kuo, P. F., Shen, C. W., Lai, C. J., & Chen, N. Y. (2026). Integrating multi-objective optimization and spatial analysis for the site selection and improvement of levee crossing facilities. <em>World Conference on Transport Research (WCTR 2026)</em>, Toulouse, France.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>A GIS-based multi-objective optimization framework for age-sensitive pedestrian route choice</h3>
+                  <p>Susanta, F. F., Kuo, P. F., & Putra, I. G. B. (2026). A GIS-based multi-objective optimization framework for age-sensitive pedestrian route choice. <em>2026 International Symposium on Remote Sensing</em>, Matsue, Japan.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="pub-year" aria-labelledby="conf-2025">
+            <h3 class="pub-year-label" id="conf-2025">2025</h3>
+            <div class="pub-items">
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Interpretable machine learning for crash severity analysis of food delivery motorcyclists</h3>
+                  <p>Putra, I. G. B., Susanta, F. F., Tedjo, B. H., & Kuo, P. F. (2025). Interpretable machine learning for crash severity analysis of food delivery motorcyclists. In <em>Proceedings of the 46th Asian Conference on Remote Sensing</em>, Makassar, Indonesia.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+              <a class="work-item" href="https://meetings.informs.org/wordpress/annual/" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>Integrated multi-objective optimization and spatial analysis for the site selection of levee crossing facilities</h3>
+                  <p>Ku, T. Y., Susanta, F. F., Kuo, P. F., Shen, C. W., Lai, C. J., & Chen, N. Y. (2025). Integrated multi-objective optimization and spatial analysis for the site selection of levee crossing facilities. <em>2025 INFORMS Annual Meeting</em>, Atlanta, Georgia.</p>
+                  <span class="doi">Conference website</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Utilizing high-definition maps and simulation software to enhance autonomous vehicle safety</h3>
+                  <p>Li, Y. T., Kuo, P. F., Chiang, K. W., Putra, I. G. B., & Susanta, F. F. (2025). Utilizing high-definition maps and simulation software to enhance autonomous vehicle safety. <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, 48</em>, 929–935. Dubai, United Arab Emirates.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+              <a class="work-item" href="https://isrs.or.kr/" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>Equitable sidewalks for all: Enhancing hospital pedestrian accessibility through data-driven assessment</h3>
+                  <p>Susanta, F. F., Kuo, P. F., Putra, I. G. B., & Tedjo, B. H. (2025). Equitable sidewalks for all: Enhancing hospital pedestrian accessibility through data-driven assessment. <em>The 30th International Symposium on Remote Sensing</em>, Incheon, South Korea.</p>
+                  <span class="doi">Conference website</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="pub-year" aria-labelledby="conf-2024">
+            <h3 class="pub-year-label" id="conf-2024">2024</h3>
+            <div class="pub-items">
+              <a class="work-item" href="https://tgis2024.rchss.sinica.edu.tw/site/default.aspx?sid=1553&amp;lang=cht" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>Improving autonomous vehicle safety using high-definition maps and CARLA software</h3>
+                  <p>Li, Y. T., Kuo, P. F., & Susanta, F. F. (2024). Improving autonomous vehicle safety: Using high-definition maps and CARLA software to establish the operational design domain of autonomous vehicles [Conference presentation]. <em>TGIS 2024 Annual Conference</em>, Taiwan.</p>
+                  <span class="doi">Conference website</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="work-item" href="https://tgis2024.rchss.sinica.edu.tw/site/default.aspx?sid=1553&amp;lang=cht" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>Pedestrian-space quality measurement and spatial analysis for older pedestrians and foreign caregivers</h3>
+                  <p>Hong, R., Cheng, W. Y., Kuo, P. F., & Susanta, F. F. (2024). Pedestrian-space quality measurement and spatial analysis: A case study of older pedestrians and foreign caregivers [Conference presentation]. <em>TGIS 2024 Annual Conference</em>, Taiwan.</p>
+                  <span class="doi">Conference website</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="work-item" href="https://sites.google.com/view/2024isrs" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>A comparison of the spatial accessibility model for hierarchical healthcare facilities in Yogyakarta City, Indonesia</h3>
+                  <p>Susanta, F. F., Kuo, P. F., & Putra, I. G. B. (2024). A comparison of the spatial accessibility model for hierarchical healthcare facilities in Yogyakarta City, Indonesia. <em>The 29th International Symposium on Remote Sensing</em>.</p>
+                  <span class="doi">Conference website</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>The 15-minute city of mass public transportation in Yogyakarta: Case of Trans Jogja bus</h3>
+                  <p>Susanta, F. F., Muryamto, R., & Laksono, D. P. (2024). The 15-minute city of mass public transportation in Yogyakarta: Case of Trans Jogja bus. In <em>Eighth Geoinformation Science Symposium 2023: Geoinformation Science for Sustainable Planet</em> (Vol. 12977, pp. 25–32). SPIE.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="pub-year" aria-labelledby="conf-2023">
+            <h3 class="pub-year-label" id="conf-2023">2023</h3>
+            <div class="pub-items">
+              <a class="work-item" href="https://geodesi.ugm.ac.id/proceeding-geolandsea2023/" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>Utilizing the low-cost GNSS module, drone, and smartphone device for precise asset monitoring system</h3>
+                  <p>Rokhmana, C., Susanta, F. F., & Setyanegara, S. (2023). Utilizing the low-cost GNSS module, drone, and smartphone device for precise asset monitoring system. <em>South East Asia Workshop on Geodetic Data Sciences, Geoinformatics, and Land Administration (Geo-Land-Sea 2023)</em>.</p>
+                  <span class="doi">Proceedings</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="pub-year" aria-labelledby="conf-2022">
+            <h3 class="pub-year-label" id="conf-2022">2022</h3>
+            <div class="pub-items">
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Development of 3D Web-GIS for Ambon flood hazard mitigation using mathematical modeling, LiDAR, and GIS</h3>
+                  <p>Rahmawati, A., Yuliandari, S. S., Susanta, F. F., Jaya, I., & Kosasih, B. (2022). Development of 3D Web-GIS for Ambon flood hazard mitigation using mathematical modeling, LiDAR, and GIS. <em>South East Asian Surveyor Congress 2022</em>.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Visualisasi hasil analisis dampak bencana Gunung Api Sinabung tahun 2018–2020</h3>
+                  <p>Prasetya, S. R., & Susanta, F. F. (2022). Visualisasi hasil analisis dampak bencana Gunung Api Sinabung tahun 2018–2020. In <em>Seminar Nasional Geomatika</em> (pp. 1015–1026).</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Visualisasi risiko bencana gempa bumi menggunakan WebGIS untuk mitigasi bencana: Studi kasus Kota Palu</h3>
+                  <p>Yudhanti, G. T., Susanta, F. F., & Pratama, C. (2022). Visualisasi risiko bencana gempa bumi menggunakan WebGIS untuk mitigasi bencana: Studi kasus Kota Palu, Sulawesi Tengah. In <em>Seminar Nasional Geomatika</em> (pp. 1–10).</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="pub-year" aria-labelledby="conf-2021">
+            <h3 class="pub-year-label" id="conf-2021">2021</h3>
+            <div class="pub-items">
+              <a class="work-item" href="https://doi.org/10.4233/uuid:6669b973-e44f-4009-8127-030d4bbf6696" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>3D modelling, validation and visualization of 3D parcels in first registration for 3D cadastre: Indonesia case</h3>
+                  <p>Aditya, T., Laksono, D. P., Atunggal, D., Susanta, F. F., Widjajanti, N., Setiawan, M. B., Agam, N., & Wibisono, T. (2021). 3D modelling, validation and visualization of 3D parcels in first registration for 3D cadastre: Indonesia case. <em>7th International FIG Workshop on 3D Cadastres</em>.</p>
+                  <span class="doi">https://doi.org/10.4233/uuid:6669b973-e44f-4009-8127-030d4bbf6696</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Pembuatan sistem informasi kondisi jalan pada ruas jalan di Kabupaten Indragiri Hulu</h3>
+                  <p>Aryani, D. D., SP, D. A., & Susanta, F. F. (2021). Pembuatan sistem informasi kondisi jalan pada ruas jalan di Kabupaten Indragiri Hulu. In <em>Seminar Nasional Geomatika</em> (pp. 523–534).</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="pub-year" aria-labelledby="conf-2019">
+            <h3 class="pub-year-label" id="conf-2019">2019</h3>
+            <div class="pub-items">
+              <a class="work-item" href="https://drive.google.com/file/d/1ApkerSwFaeALmcY6QbRil2w38hGog7hV/view" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>Pemodelan variabel gempa bumi sebagai sarana edukasi untuk mitigasi bencana di Indonesia</h3>
+                  <p>Susanta, F. F., Pratama, C., Khomaini, A. F., & Abdillah, H. W. K. (2019). Pemodelan variabel gempa bumi sebagai sarana edukasi untuk mitigasi bencana di Indonesia. <em>Forum Ilmiah Tahunan, Ikatan Surveyor Indonesia</em>, Jakarta.</p>
+                  <span class="doi">View paper</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="work-item" href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11311/2548481/Visual-analytics-for" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>Visual analytics for railway network in Java Island</h3>
+                  <p>Susanta, F. F. (2019). Visual analytics for railway network in Java Island. In <em>Sixth Geoinformation Science Symposium</em> (Vol. 11311, Article 1131108). SPIE.</p>
+                  <span class="doi">SPIE Digital Library</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <article class="work-item nonlinked">
+                <div>
+                  <h3>Visualisasi permintaan penumpang angkutan umum hasil analisis Analytical Hierarchy Process di Kabupaten Kulon Progo</h3>
+                  <p>Susanta, F. F., & Aditya, T. (2019). Visualisasi permintaan penumpang angkutan umum hasil analisis Analytical Hierarchy Process (AHP) di Kabupaten Kulon Progo. <em>Simposium Infrastruktur Informasi Geospasial</em>, Yogyakarta.</p>
+                </div><span class="arrow" aria-hidden="true">•</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="pub-year" aria-labelledby="conf-2018">
+            <h3 class="pub-year-label" id="conf-2018">2018</h3>
+            <div class="pub-items">
+              <a class="work-item" href="https://doi.org/10.5194/isprs-archives-XLII-4-W10-3-2018" target="_blank" rel="noreferrer">
+                <div>
+                  <h3>A usability evaluation of a 3D map display for pedestrian navigation</h3>
+                  <p>Aditya, T., Laksono, D. P., Sutanta, H., Izzahudin, N., & Susanta, F. F. (2018). A usability evaluation of a 3D map display for pedestrian navigation. <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLII-4/W10</em>, 3–10.</p>
+                  <span class="doi">https://doi.org/10.5194/isprs-archives-XLII-4-W10-3-2018</span>
+                </div><span class="arrow" aria-hidden="true">↗</span>
               </a>
             </div>
           </section>
